@@ -1,0 +1,63 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+
+<!-- Use this to add HTML to layout.html's <head> -->
+{% block loadInHead %}
+<!-- For any JavaScript code you might use -->
+<script src="{% static 'home/index.js' %}"></script>
+{% endblock %}
+
+<!-- Adds content to the <body> -->
+{% block content %}
+
+<main class="main-container">
+  <section class="content-container">
+    <div class="content">
+
+      <div class="posts">
+        <!-- This element and class contain attributes that each 'post' should have -->
+        <article class="post">
+          <div class="post__header">
+            <!-- Makes the profile picture clickable -->
+            <div class="post__profile">
+              <a href="https://github.com/leocosta1" target="_blank" class="post__avatar">
+                <img src="{% static 'home/assets/default-user.png' %}" alt="User Picture" />
+              </a>
+              <!-- Makes the username clickable -->
+              <a">You</a>
+            </div>
+          </div>
+
+          <div class="post__content">
+            <div class="post__medias">
+              <!-- Sets the image to the post's URL -->
+              <img class="post__media" src="https://source.unsplash.com/random/512x512/?cat" alt="Post Content" />
+            </div>
+          </div>
+
+        
+          
+          <div class="post__comments">
+            
+            <h3 class="post__comments-heading">Post Description</h3>
+
+
+            <!-- Comment Input Field -->
+            <div class="post__comment-input">
+              <input type="text" class="post__comment-textfield" placeholder="Describe your Post..." />
+              <button class="post__comment-submit">Post</button>
+            </div>
+
+           
+          </div>
+        </article>
+      </div>
+    </div>
+    <div style="margin-left: 400px;">
+        <a href="http://127.0.0.1:8000/"> <button class="post__comment-submit">Home</button></a>
+     </div>
+
+    <!--  -->
+
+{% endblock %}
